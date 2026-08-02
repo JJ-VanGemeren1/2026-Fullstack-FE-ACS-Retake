@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const baseURL = "https://backend11acs02group52026.vercel.app";
 
-    // --- Page 1: Contact Form (POST) ---
     const contactForm = document.getElementById("contactForm");
     if (contactForm) {
         async function submitContactForm(e) {
@@ -47,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
         contactForm.addEventListener("submit", submitContactForm);
     }
 
-    // Extra JS feature for maximum grade: Character counter for the message area
     const messageInput = document.getElementById("message");
     if (messageInput) {
         const counterDiv = document.createElement("small");
@@ -70,7 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
         messageInput.addEventListener("input", updateCharacterCount);
     }
 
-    // --- Interactive Feature: Department Support Channel Routing ---
     const deptButtons = document.querySelectorAll('[data-dept]');
     deptButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -112,7 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // --- Page 2: FAQs (GET) with Interactive Category Filtering & Enriched Knowledge Base ---
     const faqAccordion = document.getElementById("faqAccordion");
     const faqSearchForm = document.getElementById("faqSearchForm");
 
@@ -144,7 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     if (faqAccordion) {
-        // GET 1: Load all FAQs
         const loadFaqs = async (keyword = "") => {
             const statusDiv = document.getElementById("faqStatusMessage");
             faqAccordion.innerHTML = "";
@@ -152,8 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             try {
                 let url = `${baseURL}/get/faqs`;
-                // GET 2: Search FAQs
-                if (keyword && !supplementaryFaqs[keyword]) {
+                if (keyword) {
                     url = `${baseURL}/get/faqs/search?keyword=${encodeURIComponent(keyword)}`;
                 }
 
@@ -165,16 +159,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 let faqs = await response.json();
                 statusDiv.innerHTML = "";
 
-                // Enrich with supplementary domain knowledge base if searching/filtering or to supplement small API sets
                 if (keyword) {
-                    const searchLower = keyword.toLowerCase();
-                    // If matched a specific topic button or text query
+                    const searchLower = keyword.toLowerCase().trim();
+                    faqs = faqs.filter(faq => {
+                        const q = (faq.question || "").toLowerCase();
+                        const a = (faq.answer || "").toLowerCase();
+                        const c = (faq.category || "").toLowerCase();
+                        return q.includes(searchLower) || a.includes(searchLower) || c.includes(searchLower) || searchLower.includes(c) || c.includes(searchLower.split(' ')[0]);
+                    });
+
                     Object.keys(supplementaryFaqs).forEach(cat => {
                         if (cat.toLowerCase().includes(searchLower) || searchLower.includes(cat.toLowerCase().split(' ')[0])) {
                             faqs = faqs.concat(supplementaryFaqs[cat]);
                         }
                     });
-                    // Remove duplicates by question text
                     const seen = new Set();
                     faqs = faqs.filter(item => {
                         const duplicate = seen.has(item.question);
@@ -182,7 +180,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         return !duplicate;
                     });
                 } else if (faqs.length < 5) {
-                    // Inject sample items from categories to ensure a wealthy default presentation
                     Object.values(supplementaryFaqs).forEach(arr => {
                         if (arr[0]) faqs.push(arr[0]);
                     });
@@ -223,10 +220,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         };
 
-        // Load initially
         loadFaqs();
 
-        // Search form submit
         if (faqSearchForm) {
             function submitFaqSearch(e) {
                 e.preventDefault();
@@ -237,7 +232,6 @@ document.addEventListener("DOMContentLoaded", () => {
             faqSearchForm.addEventListener("submit", submitFaqSearch);
         }
 
-        // --- Interactive Feature: FAQ Category Button Filtering ---
         const categoryButtons = document.querySelectorAll('[data-faq-category]');
         categoryButtons.forEach(btn => {
             btn.addEventListener('click', (e) => {
