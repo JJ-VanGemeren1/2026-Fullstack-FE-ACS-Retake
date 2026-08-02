@@ -1,10 +1,38 @@
 @import "../../common/css/global_vars.css";
 
+/* --- Navigation Bar & Link Color Fixes (Retake Visual Fix) --- */
+.main-navbar .navbar-nav .nav-link.active,
+.main-navbar .navbar-nav .nav-link:hover,
+.main-navbar .navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+/* --- Custom Bootstrap Component 1: FAQ Accordion --- */
+.accordion-item {
+    border: 1px solid var(--border-color, #dee2e6);
+    border-radius: 8px !important;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 4px 12px rgba(16, 32, 54, 0.08);
+    border-color: #3682ae;
+}
+
+.accordion-button {
+    padding: 1.2rem 1.5rem;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    color: var(--secondary-color);
+}
 
 .accordion-button:not(.collapsed) {
     color: #3682ae;
     background-color: var(--tertiary-color);
-    border-color: var(--secondary-color);
+    border-bottom: 1px solid rgba(54, 130, 174, 0.2);
+    font-weight: 600;
 }
 
 .accordion-button:focus {
@@ -12,19 +40,12 @@
     border-color: var(--secondary-color);
 }
 
-.btn-primary {
-    color: #3682ae;
-    background-color: var(--tertiary-color);
-    border-color: var(--secondary-color);
-    --bs-btn-active-color: #3682ae;
-    --bs-btn-active-bg: var(--tertiary-color);
-    --bs-btn-active-border-color: var(--secondary-color);
-}
-
-.btn-primary:hover {
-    color: #e6edf1;
-    background-color: #3682ae;
-    border-color: #102036;
+/* --- Custom Bootstrap Component 2: Form Controls & Floating Labels --- */
+.form-floating > .form-control,
+.form-floating > .form-select {
+    border-radius: 8px;
+    border: 1.5px solid #dee2e6;
+    transition: all 0.3s ease;
 }
 
 .form-control:focus,
@@ -32,10 +53,233 @@
     color: #3682ae;
     border-color: #3682ae;
     outline: 0;
-    box-shadow: 0 0 0 0.1rem #3682ae;
+    box-shadow: 0 0 0 0.2rem rgba(54, 130, 174, 0.2);
+    background-color: var(--white, #ffffff);
 }
 
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+    color: #3682ae;
+    font-weight: 500;
+}
+
+/* --- Custom Buttons --- */
+.btn-primary {
+    color: var(--white);
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    border-radius: 6px;
+    font-weight: 500;
+    padding: 0.6rem 1.4rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    color: var(--white) !important;
+    background-color: #3682ae !important;
+    border-color: #3682ae !important;
+    box-shadow: 0 4px 10px rgba(54, 130, 174, 0.3);
+}
+
+.btn-dark {
+    border-radius: 6px;
+    font-weight: 500;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-dark:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Support Cards & Info Boxes --- */
+.support-info-card {
+    background: linear-gradient(135deg, var(--tertiary-color, #e6edf1) 0%, #ffffff 100%);
+    border-left: 5px solid #3682ae;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.support-badge {
+    background-color: var(--secondary-color, #102036);
+    color: #ffffff;
+    font-size: 0.8rem;
+    padding: 0.4em 0.8em;
+    border-radius: 20px;
+}
+
+/* --- Headings --- */
 h1 {
     color: var(--secondary-color);
 }
+
+/* --- New Content Enrichment Styles (Cards & Guides) --- */
+.content-feature-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color, #dee2e6);
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: 100%;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.content-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(16, 32, 54, 0.1);
+    border-color: #3682ae;
+}
+
+.content-feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: rgba(54, 130, 174, 0.12);
+    color: #3682ae;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+}
+
+/* --- Knowledge Base Category Card Enhancements --- */
+.category-card-premium {
+    background: #ffffff;
+    border: 1px solid var(--border-color, #dee2e6);
+    border-radius: 12px;
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--secondary-color, #102036);
+    transition: background 0.3s ease;
+}
+
+.category-card-premium:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(16, 32, 54, 0.12);
+    border-color: #3682ae;
+}
+
+.category-card-premium:hover::before {
+    background: #3682ae;
+}
+
+.category-topic-list {
+    margin: 1.2rem 0;
+    padding: 0;
+    list-style: none;
+    flex-grow: 1;
+}
+
+.category-topic-list li {
+    padding: 0.35rem 0;
+    font-size: 0.9rem;
+    color: var(--secondary-color, #102036);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px dashed rgba(222, 226, 230, 0.6);
+}
+
+.category-topic-list li:last-child {
+    border-bottom: none;
+}
+
+.category-topic-list li i {
+    font-size: 0.65rem;
+    margin-right: 0.6rem;
+    color: #3682ae;
+}
+
+.btn-explore {
+    color: var(--secondary-color, #102036);
+    border: 1px solid rgba(16, 32, 54, 0.2);
+    background: transparent;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-explore i {
+    transition: transform 0.25s ease;
+}
+
+.btn-explore:hover {
+    background: #3682ae;
+    border-color: #3682ae;
+    color: #ffffff !important;
+}
+
+.btn-explore:hover i {
+    transform: translateX(4px);
+    color: #ffffff !important;
+}
+
+.info-guide-box {
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border-left: 5px solid #3682ae;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.step-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--secondary-color, #102036);
+    color: #ffffff;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+}
+
+/* --- Footer Override for Contrast Visibility --- */
+footer {
+    background-color: var(--secondary-color, #102036) !important;
+    color: var(--tertiary-color, #e6edf1) !important;
+    border-top: 2px solid #3682ae !important;
+}
+
+/* --- Retake Requirement: Prominent Fictional Disclaimer & Author Attribution --- */
+.fictional-disclaimer {
+    background-color: rgba(255, 193, 7, 0.15) !important;
+    border: 1px solid rgba(255, 193, 7, 0.6) !important;
+    color: #ffda6a !important;
+    padding: 0.85rem 1.4rem;
+    border-radius: 8px;
+    font-size: 0.92rem;
+    font-weight: 500;
+}
+
+.author-credit {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ffffff !important;
+}
+
+.author-credit span {
+    color: #ffda6a !important;
+}
+
 

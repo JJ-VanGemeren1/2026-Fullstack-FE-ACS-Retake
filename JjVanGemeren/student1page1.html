@@ -29,11 +29,11 @@
             </button>
             <div class="collapse navbar-collapse navbar-menu" id="navbarNavAltMarkup">
                 <div class="navbar-nav mx-auto">
-                    <a class="nav-link"  href="../index.html">Home</a>
-                    <a class="nav-link " href="../Melissaange2003/AboutUs.html">About Us</a>
+                    <a class="nav-link" href="../index.html">Home</a>
+                    <a class="nav-link" href="../Melissaange2003/AboutUs.html">About Us</a>
                     <a class="nav-link" href="../student2/student2page1.html">Product</a>
                     <a class="nav-link" href="./student1page2.html">FAQ</a>
-                    <a class="nav-link" href="./student1page1.html">Contact us</a>
+                    <a class="nav-link active" aria-current="page" href="./student1page1.html">Contact us</a>
                     <a class="nav-link" href="../student2/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
                 <div class="navbar-action">
@@ -74,57 +74,251 @@
 </div>
 
 <main class="container my-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <h1 class="my-4 text-center display-4 fw-bold">Contact Us</h1>
-            <p>Have questions about Cytek? We're here to help.</p>
+    <section class="contact-section">
+        <header class="text-center mb-5">
+            <h1 class="my-4 display-4 fw-bold">Contact Us</h1>
+            <p class="lead text-secondary">Have questions about Cytek? We're here to help.</p>
+        </header>
 
-            <div id="contactStatusMessage"></div>
-            <form action="#" method="post" class="shadow-sm p-4 border rounded bg-light" id="contactForm">
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <label for="name" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="John Doe" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="email" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
-                    </div>
+        <!-- Content Enrichment: Dedicated Support Channels Overview -->
+        <section class="my-5" aria-label="Support Channels">
+            <header class="text-center mb-5">
+                <h2 class="h3 fw-bold mb-2">Select Your Support Channel</h2>
+                <p class="text-secondary mb-0">Route your inquiry directly to our specialized departmental desks for immediate resolution.</p>
+            </header>
+            <div class="row g-4 mb-5">
+                <!-- Channel 1: General & Sales -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="category-card-premium">
+                        <header class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="content-feature-icon mb-0"><i class="fa-solid fa-comments"></i></div>
+                            <span class="badge bg-light text-success border fw-medium px-2 py-1"><i class="fa-solid fa-circle text-success me-1 small"></i>Online Now</span>
+                        </header>
+                        <h3 class="h5 fw-bold mb-2">General &amp; Sales</h3>
+                        <p class="text-secondary small mb-1">Assistance with device selection, custom accessory bundles, and pre-purchase inquiries.</p>
+                        <ul class="category-topic-list">
+                            <li><i class="fa-solid fa-check"></i>Product specification evaluations</li>
+                            <li><i class="fa-solid fa-check"></i>Retail pricing &amp; financing advice</li>
+                            <li><i class="fa-solid fa-check"></i>Custom accessory bundle guidance</li>
+                            <li><i class="fa-solid fa-check"></i>Reply window: under 4 business hours</li>
+                        </ul>
+                        <footer>
+                            <a href="#contactForm" class="btn-explore text-decoration-none w-100" data-dept="General &amp; Sales Inquiry" data-prompt="[Sales &amp; Device Selection Inquiry]: ">
+                                <span>Connect with Sales</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </footer>
+                    </article>
                 </div>
 
-                <div class="mb-3">
-                    <label for="subject" class="form-label">Subject</label>
-                    <select class="form-select" id="subject">
-                        <option selected>General Inquiry</option>
-                        <option value="1">Product Support</option>
-                        <option value="2">Billing</option>
-                        <option value="3">Partnership</option>
-                    </select>
+                <!-- Channel 2: Technical & Warranty -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="category-card-premium">
+                        <header class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="content-feature-icon mb-0"><i class="fa-solid fa-wrench"></i></div>
+                            <span class="badge bg-light text-primary border fw-medium px-2 py-1"><i class="fa-solid fa-bolt me-1 text-primary"></i>2hr SLA</span>
+                        </header>
+                        <h3 class="h5 fw-bold mb-2">Technical &amp; Warranty</h3>
+                        <p class="text-secondary small mb-1">Certified engineers ready to diagnose hardware anomalies and initiate warranty workflows.</p>
+                        <ul class="category-topic-list">
+                            <li><i class="fa-solid fa-check"></i>Remote telemetry system diagnostics</li>
+                            <li><i class="fa-solid fa-check"></i>RMA return authorization tracking</li>
+                            <li><i class="fa-solid fa-check"></i>Authorized hardware repair scheduling</li>
+                            <li><i class="fa-solid fa-check"></i>Priority support SLA: under 2 hours</li>
+                        </ul>
+                        <footer>
+                            <a href="#contactForm" class="btn-explore text-decoration-none w-100" data-dept="Technical &amp; Warranty Support" data-prompt="[Warranty &amp; Diagnostic Repair Request]: ">
+                                <span>Request Technical Care</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </footer>
+                    </article>
                 </div>
 
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="5" placeholder="How can we help you?" required></textarea>
+                <!-- Channel 3: Enterprise & Business -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="category-card-premium">
+                        <header class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="content-feature-icon mb-0"><i class="fa-solid fa-handshake"></i></div>
+                            <span class="badge bg-light text-dark border fw-medium px-2 py-1"><i class="fa-solid fa-briefcase me-1"></i>VIP Desk</span>
+                        </header>
+                        <h3 class="h5 fw-bold mb-2">Enterprise &amp; Business</h3>
+                        <p class="text-secondary small mb-1">Tailored corporate purchasing solutions, volume discounts, and institutional deployments.</p>
+                        <ul class="category-topic-list">
+                            <li><i class="fa-solid fa-check"></i>Corporate volume discount quotes</li>
+                            <li><i class="fa-solid fa-check"></i>Educational &amp; civic tendering programs</li>
+                            <li><i class="fa-solid fa-check"></i>Dedicated VIP account executive assignment</li>
+                            <li><i class="fa-solid fa-check"></i>Direct priority teleconference access</li>
+                        </ul>
+                        <footer>
+                            <a href="#contactForm" class="btn-explore text-decoration-none w-100" data-dept="Enterprise &amp; Bulk Procurement" data-prompt="[Enterprise Volume Discount &amp; VIP Inquiry]: ">
+                                <span>Inquire Enterprise Desk</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </footer>
+                    </article>
                 </div>
 
-                <button type="submit" class="btn btn-dark px-4">Send Message</button>
-            </form>
+                <!-- Channel 4: Security & Privacy (GDPR) -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="category-card-premium">
+                        <header class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="content-feature-icon mb-0"><i class="fa-solid fa-shield-halved"></i></div>
+                            <span class="badge bg-light text-primary border fw-medium px-2 py-1"><i class="fa-solid fa-lock me-1"></i>Encrypted</span>
+                        </header>
+                        <h3 class="h5 fw-bold mb-2">Security &amp; Privacy</h3>
+                        <p class="text-secondary small mb-1">Confidential handling of GDPR rights, data protection policies, and account security recovery.</p>
+                        <ul class="category-topic-list">
+                            <li><i class="fa-solid fa-check"></i>Formal GDPR data privacy inquiries</li>
+                            <li><i class="fa-solid fa-check"></i>Two-Factor Authentication identity recovery</li>
+                            <li><i class="fa-solid fa-check"></i>Zero-trust security compliance verification</li>
+                            <li><i class="fa-solid fa-check"></i>Confidential handling &amp; audit logging</li>
+                        </ul>
+                        <footer>
+                            <a href="#contactForm" class="btn-explore text-decoration-none w-100" data-dept="Security &amp; GDPR Privacy" data-prompt="[Confidential Security &amp; GDPR Data Request]: ">
+                                <span>Contact Security Team</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </footer>
+                    </article>
+                </div>
+
+                <!-- Channel 5: Logistics & Dispatch -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="category-card-premium">
+                        <header class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="content-feature-icon mb-0"><i class="fa-solid fa-truck-fast"></i></div>
+                            <span class="badge bg-light text-primary border fw-medium px-2 py-1"><i class="fa-solid fa-location-arrow me-1"></i>Live Tracking</span>
+                        </header>
+                        <h3 class="h5 fw-bold mb-2">Logistics &amp; Dispatch</h3>
+                        <p class="text-secondary small mb-1">Support regarding Benelux parcel transit, express freight timelines, and import customs.</p>
+                        <ul class="category-topic-list">
+                            <li><i class="fa-solid fa-check"></i>Expedited courier delivery rerouting</li>
+                            <li><i class="fa-solid fa-check"></i>Transit loss insurance &amp; damage claims</li>
+                            <li><i class="fa-solid fa-check"></i>Customs documentation &amp; tariff assistance</li>
+                            <li><i class="fa-solid fa-check"></i>Warehouse pickup schedule revisions</li>
+                        </ul>
+                        <footer>
+                            <a href="#contactForm" class="btn-explore text-decoration-none w-100" data-dept="Logistics &amp; Shipping Dispatch" data-prompt="[Shipping Reroute &amp; Express Dispatch Inquiry]: ">
+                                <span>Inquire Logistics Desk</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </footer>
+                    </article>
+                </div>
+
+                <!-- Channel 6: Trade-In & Sustainability -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="category-card-premium">
+                        <header class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="content-feature-icon mb-0"><i class="fa-solid fa-leaf text-success"></i></div>
+                            <span class="badge bg-light text-success border fw-medium px-2 py-1"><i class="fa-solid fa-seedling text-success me-1"></i>Eco Certified</span>
+                        </header>
+                        <h3 class="h5 fw-bold mb-2">Trade-In &amp; Recycling</h3>
+                        <p class="text-secondary small mb-1">Sustainable electronics recycling, automated device valuation, and eco-discount rewards.</p>
+                        <ul class="category-topic-list">
+                            <li><i class="fa-solid fa-check"></i>Device physical evaluation appraisals</li>
+                            <li><i class="fa-solid fa-check"></i>Lithium battery recycling promo credits</li>
+                            <li><i class="fa-solid fa-check"></i>Corporate bulk e-waste pickup scheduling</li>
+                            <li><i class="fa-solid fa-check"></i>Instant discount cashback vouchers</li>
+                        </ul>
+                        <footer>
+                            <a href="#contactForm" class="btn-explore text-decoration-none w-100" data-dept="Trade-In &amp; Recycling Appraisal" data-prompt="[Electronic Trade-In &amp; E-Waste Recycling]: ">
+                                <span>Appraise Trade-In Device</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-11 col-md-9 col-lg-8">
+                <div id="contactStatusMessage"></div>
+                <article class="contact-form-card">
+                    <form action="#" method="post" class="shadow-sm p-4 border rounded bg-light" id="contactForm">
+                        <div class="row mb-3">
+                            <div class="col-12 col-sm-12 col-md-6 mb-3 mb-md-0">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="John Doe" required>
+                                    <label for="name">Full Name</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                                    <label for="email">Email Address</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-floating">
+                                <select class="form-select" id="subject" aria-label="Subject select">
+                                    <option selected value="General &amp; Sales Inquiry">General &amp; Sales Inquiry</option>
+                                    <option value="Technical &amp; Warranty Support">Technical &amp; Warranty Support</option>
+                                    <option value="Enterprise &amp; Bulk Procurement">Enterprise &amp; Bulk Procurement</option>
+                                    <option value="Security &amp; GDPR Privacy">Security &amp; GDPR Privacy</option>
+                                    <option value="Logistics &amp; Shipping Dispatch">Logistics &amp; Shipping Dispatch</option>
+                                    <option value="Trade-In &amp; Recycling Appraisal">Trade-In &amp; Recycling Appraisal</option>
+                                </select>
+                                <label for="subject">Subject</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-floating">
+                                <textarea class="form-control" id="message" style="height: 140px" placeholder="How can we help you?" required></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary px-5 py-2 mt-2">Send Message</button>
+                    </form>
+                </article>
+            </div>
         </div>
-    </div>
+
+        <!-- Content Enrichment: Campus Location & Visiting Guide -->
+        <article class="info-guide-box my-5 p-4 p-md-5">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-md-7 col-lg-8">
+                    <h2 class="h4 fw-bold mb-3"><i class="fa-solid fa-building-flag me-2 text-primary"></i>Visiting Our Headquarters</h2>
+                    <p class="text-secondary mb-3">Our research and engineering campus is centrally located in Geel, easily accessible by public transportation and major transit routes. Visitors require a confirmed appointment prior to entry.</p>
+                    <div class="row g-3 text-secondary small">
+                        <div class="col-12 col-sm-6">
+                            <i class="fa-solid fa-train text-primary me-1"></i> <strong>Transit Access:</strong> 10-minute bus shuttle from Geel Station.
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <i class="fa-solid fa-square-parking text-primary me-1"></i> <strong>Visitor Parking:</strong> Complimentary charging stations available in Lot B.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 col-lg-4 text-md-end">
+                    <div class="p-3 bg-white rounded border text-start">
+                        <h3 class="h6 fw-bold mb-2">Visitor Reception</h3>
+                        <p class="small text-secondary mb-2">Kleinhoefstraat 4, 2440 Geel<br>Building C - Tech Hub</p>
+                        <span class="badge bg-primary text-white"><i class="fa-solid fa-id-card me-1"></i>Check-in required at Desk 1</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
 </main>
 
 <footer class="py-5 mt-5">
     <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-4 col-md-6">
+        <section class="row gy-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <h5 class="fw-bold mb-3">GET IN TOUCH</h5>
                 <ul class="list-unstyled text-secondary">
-                    <li class="mb-2"><i class="fa-solid fa-phone"></i> +32 2 123 45 67</li>
-                    <li class="mb-2"><i class="fa-solid fa-at"></i> <a href="mailto:info@cytek.com" class="text-secondary text-decoration-none">info@cytek.com</a></li>
-                    <li class="mb-2"><i class="fa-solid fa-location-dot"></i> Geel 2440</li>
+                    <li class="mb-2"><i class="fa-solid fa-phone me-2"></i>+32 2 123 45 67</li>
+                    <li class="mb-2"><i class="fa-solid fa-at me-2"></i><a href="mailto:info@cytek.com" class="text-secondary text-decoration-none">info@cytek.com</a></li>
+                    <li class="mb-2"><i class="fa-solid fa-location-dot me-2"></i>Geel 2440</li>
                 </ul>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="col-12 col-md-6 col-lg-4">
                 <h5 class="fw-bold mb-3">OPENING HOURS</h5>
                 <ul class="list-unstyled text-secondary">
                     <li class="mb-2"><span class="fw-semibold">MONDAY - FRIDAY:</span> 9:00 - 18:00</li>
@@ -132,25 +326,38 @@
                     <li class="mb-2"><span class="fw-semibold">SUNDAY:</span> Closed</li>
                 </ul>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="col-12 col-md-6 col-lg-4">
                 <h5 class="fw-bold mb-3">FOLLOW US</h5>
                 <ul class="list-unstyled d-flex gap-3">
-                    <li><a href="#" class="text-secondary fs-4"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#" class="text-secondary fs-4"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#" class="text-secondary fs-4"><i class="fa-brands fa-x-twitter"></i></a></li>
-                    <li><a href="#" class="text-secondary fs-4"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="#" class="text-secondary fs-4"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-secondary fs-4"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="text-secondary fs-4"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="text-secondary fs-4"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="text-secondary fs-4"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="text-secondary fs-4"><i class="fa-brands fa-tiktok"></i></a></li>
                 </ul>
                 <p class="text-secondary mt-3"><span class="fw-bold text-dark">1000+</span> happy customers</p>
             </div>
-        </div>
-        <hr class="my-4">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-md-6 text-center text-md-start">
-                <small class="text-secondary">© 2026 <a href="https://www.thomasmore.be/">Thomas More</a>. All rights reserved. | Author: JJ Van Gemeren | This website is fictional.</small>
+        </section>
+
+        <!-- Retake Requirement: Fictional Website Disclaimer & Author Credit -->
+        <section class="row justify-content-center my-4">
+            <div class="col-12 col-md-10 text-center">
+                <div class="fictional-disclaimer shadow-sm mb-3">
+                    <i class="fa-solid fa-circle-exclamation me-2"></i><strong>Disclaimer:</strong> This website is fictional and was created exclusively for educational purposes at Thomas More University of Applied Sciences.
+                </div>
+                <p class="author-credit mb-1">
+                    <i class="fa-solid fa-user-pen me-2"></i>Author &amp; Responsible for this Page: <span class="text-dark">JJ Van Gemeren</span> (Class: 1ACS02, R-number: r1074213)
+                </p>
             </div>
-            <div class="col-md-6 text-center text-md-end">
-                <a href="#" class="text-secondary text-decoration-none me-3">Privacy Policy</a>
+        </section>
+
+        <hr class="my-4">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
+                <small class="text-secondary">© 2026 <a href="https://www.thomasmore.be" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none fw-bold">Thomas More</a>. All rights reserved.</small>
+            </div>
+            <div class="col-12 col-md-6 text-center text-md-end">
+                <a href="../Melissaange2003/PrivacyPolicy.html" class="text-secondary text-decoration-none me-3">Privacy Policy</a>
                 <a href="#" class="text-secondary text-decoration-none">Terms of Use</a>
             </div>
         </div>

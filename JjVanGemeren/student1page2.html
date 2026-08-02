@@ -29,10 +29,10 @@
             </button>
             <div class="collapse navbar-collapse navbar-menu" id="navbarNavAltMarkup">
                 <div class="navbar-nav mx-auto">
-                    <a class="nav-link"  href="../index.html">Home</a>
-                    <a class="nav-link " href="../Melissaange2003/AboutUs.html">About Us</a>
+                    <a class="nav-link" href="../index.html">Home</a>
+                    <a class="nav-link" href="../Melissaange2003/AboutUs.html">About Us</a>
                     <a class="nav-link" href="../student2/student2page1.html">Product</a>
-                    <a class="nav-link" href="./student1page2.html">FAQ</a>
+                    <a class="nav-link active" aria-current="page" href="./student1page2.html">FAQ</a>
                     <a class="nav-link" href="./student1page1.html">Contact us</a>
                     <a class="nav-link" href="../student2/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
@@ -75,45 +75,247 @@
 
 
 <main class="container my-5">
-    <div class="text-center mb-5">
-        <h1 class="my-5 display-4 fw-bold">Frequently Asked Questions</h1>
-        <p>Everything you need to know about Cytek products and services.</p>
-    </div>
+    <section class="faq-header-section text-center mb-5">
+        <header>
+            <h1 class="my-4 display-4 fw-bold">Frequently Asked Questions</h1>
+            <p class="lead text-secondary">Everything you need to know about Cytek products and services.</p>
+        </header>
+    </section>
 
-    <div class="row justify-content-center mb-4">
-        <div class="col-lg-8">
-            <form id="faqSearchForm" class="d-flex">
-                <input type="text" id="faqSearchInput" class="form-control me-2" placeholder="Search FAQs...">
-                <button type="submit" class="btn btn-primary">Search</button>
-            </form>
-        </div>
-    </div>
-    
-    <div class="row justify-content-center mb-3">
-        <div class="col-lg-8" id="faqStatusMessage"></div>
-    </div>
+    <!-- Content Enrichment: Knowledge Base Category Guides -->
+    <section class="mb-5" aria-label="Support Categories">
+        <header class="text-center mb-5">
+            <h2 class="h3 fw-bold mb-2">Browse Topics by Category</h2>
+            <p class="text-secondary mb-0">Select a knowledge base hub to view specialized documentation, tutorials, and repair guides.</p>
+        </header>
+        <div class="row g-4">
+            <!-- Category 1: Mobile Devices -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="category-card-premium">
+                    <header class="d-flex align-items-center justify-content-between mb-3">
+                        <div class="content-feature-icon mb-0"><i class="fa-solid fa-mobile-screen"></i></div>
+                        <span class="badge bg-light text-primary border fw-medium px-2 py-1"><i class="fa-solid fa-file-lines me-1"></i>14 Articles</span>
+                    </header>
+                    <h3 class="h5 fw-bold mb-2">Mobile Devices</h3>
+                    <p class="text-secondary small mb-1">Setup guides, cellular diagnostics, and hardware optimization for smartphone series.</p>
+                    <ul class="category-topic-list">
+                        <li><i class="fa-solid fa-chevron-right"></i>Battery health calibration &amp; power saving</li>
+                        <li><i class="fa-solid fa-chevron-right"></i>eSIM profiles &amp; multi-carrier migration</li>
+                        <li><i class="fa-solid fa-chevron-right"></i>Super AMOLED HDR display adjustment</li>
+                        <li><i class="fa-solid fa-chevron-right"></i>Biometric fingerprint &amp; face unlock</li>
+                    </ul>
+                    <footer>
+                        <a href="#faqSearchInput" class="btn-explore text-decoration-none w-100" data-faq-category="Mobile Devices">
+                            <span>Explore Mobile Support</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </footer>
+                </article>
+            </div>
 
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <div class="accordion" id="faqAccordion">
-                <!-- FAQs will be loaded here dynamically -->
+            <!-- Category 2: Laptops & Workstations -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="category-card-premium">
+                    <header class="d-flex align-items-center justify-content-between mb-3">
+                        <div class="content-feature-icon mb-0"><i class="fa-solid fa-laptop"></i></div>
+                        <span class="badge bg-light text-primary border fw-medium px-2 py-1"><i class="fa-solid fa-file-lines me-1"></i>19 Articles</span>
+                    </header>
+                    <h3 class="h5 fw-bold mb-2">Laptops &amp; Systems</h3>
+                    <p class="text-secondary small mb-1">Architecture documentation, firmware kernel patches, and computing diagnostics.</p>
+                    <ul class="category-topic-list">
+                        <li><i class="fa-solid fa-chevron-right"></i>BIOS over-the-air firmware upgrades</li>
+                        <li><i class="fa-solid fa-chevron-right"></i>Thunderbolt 4 multi-monitor docking setup</li>
+                        <li><i class="fa-solid fa-chevron-right"></i>Dual-fan thermal profiling &amp; acoustics</li>
+                        <li><i class="fa-solid fa-chevron-right"></i>NVMe SSD storage expansion guidelines</li>
+                    </ul>
+                    <footer>
+                        <a href="#faqSearchInput" class="btn-explore text-decoration-none w-100" data-faq-category="Laptops &amp; Systems">
+                            <span>Explore Laptops Support</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </footer>
+                </article>
+            </div>
+
+            <!-- Category 3: Audio & Wearables -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="category-card-premium">
+                    <header class="d-flex align-items-center justify-content-between mb-3">
+                        <div class="content-feature-icon mb-0"><i class="fa-solid fa-headphones"></i></div>
+                        <span class="badge bg-light text-primary border fw-medium px-2 py-1"><i class="fa-solid fa-file-lines me-1"></i>9 Articles</span>
+                    </header>
+                    <h3 class="h5 fw-bold mb-2">Audio &amp; Wearables</h3>
+                    <p class="text-secondary small mb-1">Acoustic firmware tuning, Bluetooth LE pairing, and smart fitness telemetry.</p>
+                    <ul class="category-topic-list">
+                        <li><i class="fa-solid fa-chevron-right"></i>Active Noise Cancellation (ANC) calibration</li>
+                        <li><i class="fa-solid fa-chevron-right"></i>Low-latency wireless audio codec switching</li>
+                        <li><i class="fa-solid fa-chevron-right"></i>Optical heart-rate &amp; SpO2 sensor accuracy</li>
+                        <li><i class="fa-solid fa-chevron-right"></i>Multi-device multipoint Bluetooth switching</li>
+                    </ul>
+                    <footer>
+                        <a href="#faqSearchInput" class="btn-explore text-decoration-none w-100" data-faq-category="Audio &amp; Wearables">
+                            <span>Explore Audio Support</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </footer>
+                </article>
+            </div>
+
+            <!-- Category 4: Shipping & Delivery -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="category-card-premium">
+                    <header class="d-flex align-items-center justify-content-between mb-3">
+                        <div class="content-feature-icon mb-0"><i class="fa-solid fa-truck-fast"></i></div>
+                        <span class="badge bg-light text-primary border fw-medium px-2 py-1"><i class="fa-solid fa-file-lines me-1"></i>11 Articles</span>
+                    </header>
+                    <h3 class="h5 fw-bold mb-2">Shipping &amp; Delivery</h3>
+                    <p class="text-secondary small mb-1">Dispatch schedules, package tracking, and international freight guidelines.</p>
+                    <ul class="category-topic-list">
+                        <li><i class="fa-solid fa-chevron-right"></i>Benelux express courier live dispatch map</li>
+                        <li><i class="fa-solid fa-chevron-right"></i>Transit loss insurance &amp; signature rules</li>
+                        <li><i class="fa-solid fa-chevron-right"></i>Customs clearances, tariffs &amp; EU VAT notes</li>
+                        <li><i class="fa-solid fa-chevron-right"></i>Resuming missed deliveries via collection points</li>
+                    </ul>
+                    <footer>
+                        <a href="#faqSearchInput" class="btn-explore text-decoration-none w-100" data-faq-category="Shipping &amp; Delivery">
+                            <span>Explore Shipping FAQs</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </footer>
+                </article>
+            </div>
+
+            <!-- Category 5: Trade-In Program -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="category-card-premium">
+                    <header class="d-flex align-items-center justify-content-between mb-3">
+                        <div class="content-feature-icon mb-0"><i class="fa-solid fa-arrows-rotate"></i></div>
+                        <span class="badge bg-light text-primary border fw-medium px-2 py-1"><i class="fa-solid fa-file-lines me-1"></i>8 Articles</span>
+                    </header>
+                    <h3 class="h5 fw-bold mb-2">Trade-In &amp; Refurbish</h3>
+                    <p class="text-secondary small mb-1">Device condition grading, ecological recycling credit, and exchange mechanics.</p>
+                    <ul class="category-topic-list">
+                        <li><i class="fa-solid fa-chevron-right"></i>Automated device physical evaluation check</li>
+                        <li><i class="fa-solid fa-chevron-right"></i>Eco-friendly lithium battery recycling reward</li>
+                        <li><i class="fa-solid fa-chevron-right"></i>Instant purchase trade-in credit transfer</li>
+                        <li><i class="fa-solid fa-chevron-right"></i>Refurbished device grade standards (A+ / B)</li>
+                    </ul>
+                    <footer>
+                        <a href="#faqSearchInput" class="btn-explore text-decoration-none w-100" data-faq-category="Trade-In &amp; Refurbish">
+                            <span>Explore Trade-In Support</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </footer>
+                </article>
+            </div>
+
+            <!-- Category 6: Account & Cybersecurity -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="category-card-premium">
+                    <header class="d-flex align-items-center justify-content-between mb-3">
+                        <div class="content-feature-icon mb-0"><i class="fa-solid fa-shield-halved"></i></div>
+                        <span class="badge bg-light text-primary border fw-medium px-2 py-1"><i class="fa-solid fa-file-lines me-1"></i>16 Articles</span>
+                    </header>
+                    <h3 class="h5 fw-bold mb-2">Account &amp; Security</h3>
+                    <p class="text-secondary small mb-1">Authentication protocols, GDPR privacy compliance, and cloud backup vaults.</p>
+                    <ul class="category-topic-list">
+                        <li><i class="fa-solid fa-chevron-right"></i>Two-Factor Authentication (2FA) vault binding</li>
+                        <li><i class="fa-solid fa-chevron-right"></i>GDPR automated complete data archive export</li>
+                        <li><i class="fa-solid fa-chevron-right"></i>Zero-trust end-to-end cloud account encryption</li>
+                        <li><i class="fa-solid fa-chevron-right"></i>Revoking suspicious remote login device sessions</li>
+                    </ul>
+                    <footer>
+                        <a href="#faqSearchInput" class="btn-explore text-decoration-none w-100" data-faq-category="Account &amp; Security">
+                            <span>Explore Security FAQs</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </footer>
+                </article>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="faq-search-section">
+        <div class="row justify-content-center mb-4">
+            <div class="col-12 col-sm-11 col-md-9 col-lg-8">
+                <form id="faqSearchForm" class="d-flex shadow-sm p-2 rounded bg-light border">
+                    <input type="text" id="faqSearchInput" class="form-control me-2 border-0 bg-transparent" placeholder="Search FAQs by keyword..." aria-label="Search FAQs">
+                    <button type="submit" class="btn btn-primary px-4">Search</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center mb-3">
+            <div class="col-12 col-sm-11 col-md-9 col-lg-8" id="faqStatusMessage"></div>
+        </div>
+    </section>
+
+    <section class="faq-list-section">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-11 col-md-9 col-lg-8">
+                <div class="accordion shadow-sm rounded" id="faqAccordion">
+                    <!-- FAQs will be loaded here dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Enrichment: Self-Service Troubleshooting Checklist -->
+    <article class="info-guide-box my-5 p-4 p-md-5">
+        <h2 class="h4 fw-bold mb-3"><i class="fa-solid fa-stethoscope me-2 text-primary"></i>Before Initiating a Service Request</h2>
+        <p class="text-secondary mb-4">Most common operational anomalies can be rectified immediately by completing our standardized hardware diagnostic routine:</p>
+        
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <div class="d-flex align-items-start">
+                    <span class="step-circle flex-shrink-0">1</span>
+                    <div>
+                        <h3 class="h6 fw-bold mb-1">Firmware Verification</h3>
+                        <p class="text-secondary small mb-0">Verify that your Cytek OS has applied the latest over-the-air security kernel patch via Settings.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="d-flex align-items-start">
+                    <span class="step-circle flex-shrink-0">2</span>
+                    <div>
+                        <h3 class="h6 fw-bold mb-1">Hard Power Cycle</h3>
+                        <p class="text-secondary small mb-0">Disconnect peripheral power cables and hold the master standby toggle for 15 seconds.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="d-flex align-items-start">
+                    <span class="step-circle flex-shrink-0">3</span>
+                    <div>
+                        <h3 class="h6 fw-bold mb-1">Diagnostic Mode</h3>
+                        <p class="text-secondary small mb-0">Boot into hardware diagnostic console holding Volume Up during initial startup sequence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Content Enrichment: Dedicated Support Call to Action -->
+    <section class="text-center p-4 p-md-5 my-5 bg-light rounded border shadow-sm" aria-label="Contact Support CTA">
+        <h2 class="h4 fw-bold mb-2">Still Need Technical Assistance?</h2>
+        <p class="text-secondary mb-4 mx-auto">If your problem persists after consulting the knowledge base, our certified engineering support team is standing by to help.</p>
+        <a href="./student1page1.html" class="btn btn-primary px-4 py-2"><i class="fa-solid fa-paper-plane me-2"></i>Open a Support Ticket</a>
+    </section>
 </main>
 
 <footer class="py-5 mt-5">
     <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-4 col-md-6">
+        <section class="row gy-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <h5 class="fw-bold mb-3">GET IN TOUCH</h5>
                 <ul class="list-unstyled text-secondary">
-                    <li class="mb-2"><i class="fa-solid fa-phone"></i> +32 2 123 45 67</li>
-                    <li class="mb-2"><i class="fa-solid fa-at"></i> <a href="mailto:info@cytek.com" class="text-secondary text-decoration-none">info@cytek.com</a></li>
-                    <li class="mb-2"><i class="fa-solid fa-location-dot"></i> Geel 2440</li>
+                    <li class="mb-2"><i class="fa-solid fa-phone me-2"></i>+32 2 123 45 67</li>
+                    <li class="mb-2"><i class="fa-solid fa-at me-2"></i><a href="mailto:info@cytek.com" class="text-secondary text-decoration-none">info@cytek.com</a></li>
+                    <li class="mb-2"><i class="fa-solid fa-location-dot me-2"></i>Geel 2440</li>
                 </ul>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="col-12 col-md-6 col-lg-4">
                 <h5 class="fw-bold mb-3">OPENING HOURS</h5>
                 <ul class="list-unstyled text-secondary">
                     <li class="mb-2"><span class="fw-semibold">MONDAY - FRIDAY:</span> 9:00 - 18:00</li>
@@ -121,25 +323,38 @@
                     <li class="mb-2"><span class="fw-semibold">SUNDAY:</span> Closed</li>
                 </ul>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="col-12 col-md-6 col-lg-4">
                 <h5 class="fw-bold mb-3">FOLLOW US</h5>
                 <ul class="list-unstyled d-flex gap-3">
-                    <li><a href="#" class="text-secondary fs-4"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#" class="text-secondary fs-4"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#" class="text-secondary fs-4"><i class="fa-brands fa-x-twitter"></i></a></li>
-                    <li><a href="#" class="text-secondary fs-4"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="#" class="text-secondary fs-4"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-secondary fs-4"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="text-secondary fs-4"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="text-secondary fs-4"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="text-secondary fs-4"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="text-secondary fs-4"><i class="fa-brands fa-tiktok"></i></a></li>
                 </ul>
                 <p class="text-secondary mt-3"><span class="fw-bold text-dark">1000+</span> happy customers</p>
             </div>
-        </div>
-        <hr class="my-4">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-md-6 text-center text-md-start">
-                <small class="text-secondary">© 2026 <a href="https://www.thomasmore.be/">Thomas More</a>. All rights reserved. | Author: JJ Van Gemeren | This website is fictional.</small>
+        </section>
+
+        <!-- Retake Requirement: Fictional Website Disclaimer & Author Credit -->
+        <section class="row justify-content-center my-4">
+            <div class="col-12 col-md-10 text-center">
+                <div class="fictional-disclaimer shadow-sm mb-3">
+                    <i class="fa-solid fa-circle-exclamation me-2"></i><strong>Disclaimer:</strong> This website is fictional and was created exclusively for educational purposes at Thomas More University of Applied Sciences.
+                </div>
+                <p class="author-credit mb-1">
+                    <i class="fa-solid fa-user-pen me-2"></i>Author &amp; Responsible for this Page: <span class="text-dark">JJ Van Gemeren</span> (Class: 1ACS02, R-number: r1074213)
+                </p>
             </div>
-            <div class="col-md-6 text-center text-md-end">
-                <a href="#" class="text-secondary text-decoration-none me-3">Privacy Policy</a>
+        </section>
+
+        <hr class="my-4">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
+                <small class="text-secondary">© 2026 <a href="https://www.thomasmore.be" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none fw-bold">Thomas More</a>. All rights reserved.</small>
+            </div>
+            <div class="col-12 col-md-6 text-center text-md-end">
+                <a href="../Melissaange2003/PrivacyPolicy.html" class="text-secondary text-decoration-none me-3">Privacy Policy</a>
                 <a href="#" class="text-secondary text-decoration-none">Terms of Use</a>
             </div>
         </div>
