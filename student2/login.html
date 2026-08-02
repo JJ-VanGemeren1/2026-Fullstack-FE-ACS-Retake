@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../common/css/main.css">
+    <link rel="shortcut icon" href="../images/logo-svg.svg" type="image/svg">
+</head>
+<body>
+<div class="container d-flex justify-content-center align-items-center min-vh-100 bg-light">
+
+    <div class="col-11 col-sm-9 col-md-7 col-lg-5 mx-auto shadow p-4 rounded bg-white border border-light">
+
+        <div class="text-center mb-3">
+            <img src="../images/logo-transparent-svg.svg" width="70">
+        </div>
+
+        <h3 class="fw-bold text-center mb-2">Welcome back</h3>
+
+
+        <!-- Status message goes here -->
+        <div id="loginStatusMessage"></div>
+
+        <form id="loginForm" action="#" method="POST">
+
+            <div class="mb-3">
+                <label class="form-label">Username or email</label>
+                <input type="text" class="form-control" id="loginEmail" placeholder="Enter your username or email">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+            </div>
+
+            <div class="text-end mb-3">
+                <a href="#" class="small text-decoration-none">Forgot password?</a>
+            </div>
+
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="remember">
+                <label class="form-check-label" for="remember">Remember me</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Sign in</button>
+
+            <p class="text-center mt-3">
+                Don't have an account?
+                <a href="../student2/student2page2.html">Sign up</a>
+            </p>
+
+            <p class="text-center mt-2">
+                <a href="../index.html" class="small text-decoration-none">← Back to Home</a>
+            </p>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="../common/js/bootstrap.bundle.min.js"></script>
+<script src="../Melissaange2003/js/Jscript.js"></script>
+
+</body>
+</html>

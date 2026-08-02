@@ -1,0 +1,41 @@
+@import "../../common/css/global_vars.css";
+
+
+.accordion-button:not(.collapsed) {
+    color: #3682ae;
+    background-color: var(--tertiary-color);
+    border-color: var(--secondary-color);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: var(--secondary-color);
+}
+
+.btn-primary {
+    color: #3682ae;
+    background-color: var(--tertiary-color);
+    border-color: var(--secondary-color);
+    --bs-btn-active-color: #3682ae;
+    --bs-btn-active-bg: var(--tertiary-color);
+    --bs-btn-active-border-color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+    color: #e6edf1;
+    background-color: #3682ae;
+    border-color: #102036;
+}
+
+.form-control:focus,
+.form-select:focus {
+    color: #3682ae;
+    border-color: #3682ae;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem #3682ae;
+}
+
+h1 {
+    color: var(--secondary-color);
+}
+

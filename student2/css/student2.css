@@ -1,0 +1,484 @@
+@import "common/css/global_vars.css";
+
+/* ── PRODUCT PAGE ─────────────────────────────────────── */
+section.container:has(#product-grid) {
+    & h2 {
+        font-family: var(--h-font);
+        color: var(--secondary-color);
+    }
+
+    & p.text-secondary {
+        font-family: var(--p-font);
+        color: var(--light-text) !important;
+    }
+
+    /* ── FILTER BUTTONS ── */
+    & .d-flex.justify-content-center {
+        & .btn-outline-dark {
+            font-family: var(--p-font);
+            border-radius: 50px;
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+            padding: 0.4rem 1.2rem;
+            transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+
+            &:hover {
+                background-color: var(--primary-color);
+                border-color: var(--primary-color);
+                color: var(--white);
+            }
+
+            &.active {
+                background-color: var(--secondary-color);
+                border-color: var(--secondary-color);
+                color: var(--white);
+            }
+        }
+    }
+
+    /* ── PRODUCT CARDS ── */
+    & #product-grid {
+        & #product-grid {
+            & .col-12.col-md-6.col-lg-3 {
+                @media (max-width: 576px) {
+                    flex: 0 0 100% !important;
+                    max-width: 100% !important;
+                    width: 100% !important;
+                }
+            }
+        }
+
+        & .card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: var(--secondary-color);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+            &:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 12px 24px rgba(16, 32, 54, 0.4) !important;
+            }
+
+            & .card-img-top {
+                height: 200px;
+                object-fit: cover;
+                width: 100%;
+
+                @media (max-width: 576px) {
+                    height: 280px;
+                }
+
+                @media (min-width: 577px) and (max-width: 992px) {
+                    height: 220px;
+                }
+
+                @media (min-width: 993px) {
+                    height: 200px;
+                }
+            }
+
+            & .card-body {
+                background-color: var(--secondary-color);
+                padding: 1rem;
+            }
+
+            & .card-title {
+                font-family: var(--h-font);
+                color: var(--white);
+
+                @media (max-width: 576px) {
+                    font-size: 1.3rem;
+                }
+
+                @media (min-width: 577px) and (max-width: 992px) {
+                    font-size: 1.1rem;
+                }
+
+                @media (min-width: 993px) {
+                    font-size: 1rem;
+                }
+            }
+
+            & .card-text {
+                font-family: var(--p-font);
+                color: var(--tertiary-color) !important;
+
+                @media (max-width: 576px) {
+                    font-size: 1rem;
+                }
+
+                @media (min-width: 577px) and (max-width: 992px) {
+                    font-size: 0.9rem;
+                }
+
+                @media (min-width: 993px) {
+                    font-size: 0.85rem;
+                }
+            }
+
+            & .text-primary {
+                color: var(--primary-color) !important;
+                font-family: var(--h-font);
+
+                @media (max-width: 576px) {
+                    font-size: 1.3rem;
+                }
+            }
+
+            & .btn-outline-primary {
+                border-radius: 50px;
+                border-color: var(--primary-color);
+                color: var(--tertiary-color);
+                font-family: var(--p-font);
+                transition: background 0.25s ease, color 0.25s ease;
+
+                @media (max-width: 576px) {
+                    font-size: 1rem;
+                    padding: 0.4rem 1rem;
+                }
+
+                @media (min-width: 577px) and (max-width: 992px) {
+                    font-size: 0.85rem;
+                }
+
+                @media (min-width: 993px) {
+                    font-size: 0.8rem;
+                }
+
+                &:hover {
+                    background-color: var(--primary-color);
+                    border-color: var(--primary-color);
+                    color: var(--white);
+                }
+            }
+        }
+    }
+
+    #product-grid {
+        @media (max-width: 576px) {
+            display: flex;
+            flex-direction: column;
+
+            & > * {
+                width: 100% !important;
+                max-width: 100% !important;
+                flex: none !important;
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+
+/* ── LOGIN PAGE ─────────────────────────────────────── */
+.min-vh-100.bg-light {
+    background-color: var(--tertiary-color) !important;
+
+    & .col-11 {
+        background-color: var(--secondary-color) !important;
+        border: none !important;
+        border-radius: 12px;
+        padding: 2rem;
+
+        /* Logo */
+        & img {
+            background-color: var(--primary-color);
+            padding: 6px;
+            border-radius: 8px;
+        }
+
+        /* Title */
+        & h3 {
+            font-family: var(--h-font);
+            color: var(--white);
+        }
+
+        /* Subtitle */
+        & p.text-secondary {
+            font-family: var(--p-font);
+            color: var(--tertiary-color) !important;
+        }
+
+        /* Labels */
+        & .form-label {
+            font-family: var(--p-font);
+            color: var(--tertiary-color);
+        }
+
+        /* Inputs */
+        & .form-control {
+            background-color: rgba(255, 255, 255, 0.08);
+            border: 1.5px solid rgba(105, 128, 148, 0.45);
+            color: var(--white);
+            border-radius: 8px;
+            font-family: var(--p-font);
+            transition: border-color 0.25s ease;
+
+            &::placeholder {
+                color: rgba(230, 237, 241, 0.4);
+            }
+
+            &:focus {
+                background-color: rgba(255, 255, 255, 0.12);
+                border-color: var(--primary-color);
+                color: var(--white);
+                box-shadow: none;
+            }
+        }
+
+        /* Forgot password */
+        & .text-end a {
+            font-family: var(--p-font);
+            color: var(--primary-color);
+            font-size: 0.85rem;
+
+            &:hover {
+                color: var(--white);
+            }
+        }
+
+        /* Remember me */
+        & .form-check-label {
+            font-family: var(--p-font);
+            color: var(--tertiary-color);
+        }
+
+        & .form-check-input {
+            border-color: var(--primary-color);
+            background-color: transparent;
+
+            &:checked {
+                background-color: var(--primary-color);
+                border-color: var(--primary-color);
+            }
+        }
+
+        /* Sign in button */
+        & .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            font-family: var(--p-font);
+            border-radius: 8px;
+            transition: background 0.25s ease, border-color 0.25s ease;
+
+            &:hover {
+                background-color: var(--white);
+                border-color: var(--white);
+                color: var(--secondary-color);
+            }
+        }
+
+        /* Bottom links */
+        & p.text-center {
+            font-family: var(--p-font);
+            color: var(--tertiary-color);
+
+            & a {
+                color: var(--primary-color);
+                text-decoration: none;
+
+                &:hover {
+                    color: var(--white);
+                }
+            }
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 576px) {
+        padding: 1rem;
+    }
+
+    @media (min-width: 577px) and (max-width: 992px) {
+        padding: 2rem;
+    }
+
+    @media (min-width: 993px) {
+        padding: 3rem;
+    }
+}
+
+/* ── SIGNUP PAGE ─────────────────────────────────────── */
+body:has(.form-container) {
+    background-color: var(--tertiary-color);
+
+    & .form-container {
+        background-color: var(--white);
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 8px 32px rgba(16, 32, 54, 0.1);
+
+        & h2 {
+            font-family: var(--h-font);
+            color: var(--secondary-color);
+        }
+
+        & p.text-center {
+            font-family: var(--p-font);
+            color: var(--light-text);
+        }
+
+        /* Fieldsets */
+        & fieldset {
+            border: 1.5px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            background-color: var(--white);
+
+            & legend {
+                font-family: var(--h-font);
+                color: var(--white);
+                background-color: var(--secondary-color);
+                font-size: 0.95rem;
+                padding: 0.3rem 0.8rem;
+                border-radius: 6px;
+                float: none;
+                width: auto;
+            }
+        }
+
+        /* Labels */
+        & .form-label {
+            font-family: var(--p-font);
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        /* Input group icons */
+        & .input-group-text {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: var(--white);
+        }
+
+        /* Inputs & selects */
+        & :is(.form-control, .form-select) {
+            font-family: var(--p-font);
+            border-color: var(--border-color);
+            color: var(--text-color);
+            transition: border-color 0.25s ease, box-shadow 0.25s ease;
+
+            &:focus {
+                border-color: var(--primary-color);
+                box-shadow: 0 0 0 3px rgba(105, 128, 148, 0.15);
+            }
+
+            &::placeholder {
+                color: var(--light-text);
+            }
+        }
+
+        /* Helper text */
+        & .form-text {
+            font-family: var(--p-font);
+            color: var(--light-text);
+            font-size: 0.8rem;
+        }
+
+        /* Checkboxes */
+        & .form-check-input {
+            border-color: var(--primary-color);
+
+            &:checked {
+                background-color: var(--primary-color);
+                border-color: var(--primary-color);
+            }
+
+            &:focus {
+                box-shadow: 0 0 0 3px rgba(105, 128, 148, 0.15);
+            }
+        }
+
+        /* Checkbox text spans */
+        & .input-group > span.form-control {
+            background-color: var(--tertiary-color);
+            color: var(--text-color);
+            font-family: var(--p-font);
+            font-size: 0.9rem;
+        }
+
+        /* Links */
+        & a {
+            color: var(--primary-color);
+            text-decoration: none;
+
+            &:hover {
+                color: var(--secondary-color);
+            }
+        }
+
+        /* HR */
+        & hr {
+            border-color: var(--border-color);
+        }
+
+        /* Submit button */
+        & .btn-submit {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: var(--white);
+            font-family: var(--p-font);
+            border-radius: 8px;
+            padding: 0.5rem 2rem;
+            transition: background 0.25s ease, border-color 0.25s ease;
+
+        }
+
+        .btn-submit:hover {
+            background-color: var(--white);
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        /* Bottom text */
+        & p.text-muted {
+            font-family: var(--p-font);
+            color: var(--light-text) !important;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 576px) {
+            padding: 1rem;
+        }
+
+        @media (min-width: 577px) and (max-width: 992px) {
+            padding: 1.5rem;
+        }
+
+        @media (min-width: 993px) {
+            padding: 2rem;
+        }
+    }
+}
+
+.success-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 48px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.success-card h2 {
+    color: var(--light-text);
+    font-size: 1rem;
+}
+
+.success-card h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+

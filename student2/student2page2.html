@@ -1,0 +1,364 @@
+<!doctype html>
+<!-- Name:Gedeon Niyongabo
+    Class: ACS02
+    R-number:r1087098
+     -->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Signup</title>
+        <meta name="author" content="Gedeon" />
+        <link rel="shortcut icon" href="../images/logo-svg.svg" type="image/svg">
+        <link rel="stylesheet" href="../common/css/main.css">
+    </head>
+
+    <body>
+    <header>
+        <nav class="navbar navbar-expand-lg main-navbar">
+            <div class="container-fluid navbar-container">
+                <a class="navbar-brand navbar-logo" href="../index.html">
+                    <img src="../images/logo-transparent-svg.svg" alt="Cytek logo" width="90" height="72">
+                </a>
+                <button class="navbar-toggler navbar-toggler-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navbar-menu" id="navbarNavAltMarkup">
+                    <div class="navbar-nav mx-auto">
+                        <a class="nav-link"  href="../index.html">Home</a>
+                        <a class="nav-link " href="../Melissaange2003/AboutUs.html">About Us</a>
+                        <a class="nav-link" href="./student2page1.html">Product</a>
+                        <a class="nav-link" href="../JjVanGemeren/student1page2.html">FAQ</a>
+                        <a class="nav-link" href="../JjVanGemeren/student1page1.html">Contact us</a>
+                        <a class="nav-link" href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="navbar-action">
+
+                        <a href="./login.html" class="btn btn-primary nav-btn nav-login">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary nav-btn nav-search-btn" data-bs-toggle="modal" data-bs-target="#search-modal">
+                            <i class="fa-brands fa-sistrix"></i>
+                        </button>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="search-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="signup-form" class="col-12 col-md-9 mx-auto my-5">
+        <div class="form-container">
+            <h2 class="text-center mb-4">Create Your Account</h2>
+            <p class="text-center text-muted mb-4">Please fill in all details. Fields with <span
+                    class="text-danger">*</span> are required.</p>
+
+            <form>
+
+                <fieldset class="my-4">
+                    <legend><i class="fa-solid fa-user"></i> Personal Information</legend>
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label">Full Name <span
+                                    class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="name-icon"><i class="fa-solid fa-circle-user"></i></span>
+                                <input type="text" class="form-control" id="firstName" placeholder="First"
+                                       aria-label="First name" required>
+                                <input type="text" class="form-control" id="lastName" placeholder="Last"
+                                       aria-label="Last name" required>
+                            </div>
+                            <div class="form-text">Enter your legal first and last name.</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email address <span
+                                    class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="email-addon"><i class="fa-solid fa-at"></i></span>
+                                <input type="email" class="form-control" id="email" placeholder="username@example.com"
+                                       aria-label="Email" aria-describedby="email-addon" required>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <label for="phoneNumber" class="form-label">Phone Number</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="phone-code"><i class="fa-solid fa-phone"></i></span>
+                                <input type="tel" class="form-control" id="phoneNumber" placeholder="+257 68 45 78 23"
+                                       aria-label="Phone number">
+
+                            </div>
+                            <div class="form-text">Include area code. We'll only use this for account verification.
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3">
+                            <label for="dob" class="form-label">Date of Birth</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="dob-icon"></span>
+                                <input type="date" class="form-control" id="dob" aria-label="Date of birth">
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </fieldset>
+
+
+                <fieldset class="my-5">
+                    <legend><i class="fa-solid fa-location-dot"></i> Address Information</legend>
+                    <div class="row g-3">
+
+                        <div class="col-12">
+                            <label for="street" class="form-label">Street Address <span
+                                    class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="street-icon"></span>
+                                <input type="text" class="form-control" id="street" placeholder="Klienhoefstraat 4"
+                                       aria-label="Street address" required>
+                            </div>
+                        </div>
+
+
+
+                        </div>
+
+
+                        <div class="col-md-5">
+                            <label for="city" class="form-label">City <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="city-icon"></span>
+                                <input type="text" class="form-control" id="city" placeholder="Antwerp" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="zip" class="form-label">ZIP / Postal Code <span
+                                    class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="zip-icon"></span>
+                                <input type="text" class="form-control" id="zip" placeholder="2100" required>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <label for="country" class="form-label">Country <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="country-icon"><i class="fa-solid fa-earth-europe"></i></span>
+                                <select class="form-select" id="country" required>
+                                    <option selected disabled>Choose your country</option>
+                                    <option>United States</option>
+                                    <option>Canada</option>
+                                    <option>United Kingdom</option>
+                                    <option>Australia</option>
+                                    <option>India</option>
+                                    <option>Germany</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                </fieldset>
+
+
+                <fieldset class="my-5">
+                    <legend><i class="fa-solid fa-user-lock"></i> Account & Security</legend>
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <label for="username" class="form-label">Username <span class="text-danger">*</span></label>
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text" id="username-addon"><i class="fa-regular fa-user"></i></span>
+                                <input type="text" class="form-control" id="username" placeholder="cooluser123"
+                                       aria-label="Username" aria-describedby="username-addon" required>
+                            </div>
+                            <div class="form-text">This will be your public handle.</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="password-icon"><i class="fa-solid fa-lock"></i></span>
+                                <input type="password" class="form-control" id="password"
+                                       placeholder="Create a strong password" aria-label="Password" required>
+                            </div>
+                            <div class="form-text">Minimum 8 characters, at least one number and one special
+                                character.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="confirmPassword" class="form-label">Confirm Password <span
+                                    class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="confirm-icon"></span>
+                                <input type="password" class="form-control" id="confirmPassword"
+                                       placeholder="Re-enter password" required>
+                            </div>
+                        </div>
+
+                        <!-- Security Question (custom select inside input group) -->
+                        <div class="col-md-8">
+                            <label for="securityQuestion" class="form-label">Security Question</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="security-icon"><i class="fa-solid fa-question"></i></span>
+                                <select class="form-select" id="securityQuestion">
+                                    <option selected>Choose a question...</option>
+                                    <option>What was your first pet's name?</option>
+                                    <option>What is your mother's maiden name?</option>
+                                    <option>What was your first car?</option>
+                                    <option>What elementary school did you attend?</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="securityAnswer" class="form-label">Answer</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="answer-icon"><i class="fa-solid fa-pen"></i></span>
+                                <input type="text" class="form-control" id="securityAnswer" placeholder="Your answer">
+                            </div>
+                        </div>
+
+                        <!-- How did you hear about us? (dropdown) -->
+                        <div class="col-md-6">
+                            <label for="referral" class="form-label">How did you hear about us?</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="referral-icon"><i class="fa-solid fa-bullhorn"></i></span>
+                                <select class="form-select" id="referral">
+                                    <option selected>Select...</option>
+                                    <option>Social Media</option>
+                                    <option>Friend/Family</option>
+                                    <option>Advertisement</option>
+                                    <option>Search Engine</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+
+                <fieldset class="my-4">
+
+                    <div class="row g-4">
+
+                        <!-- Newsletter subscription (checkbox inside input group) -->
+                        <div class="col-md-6">
+                            <label class="form-label d-block">Preferences</label>
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <input class="form-check-input mt-0" type="checkbox" id="newsletterCheck"
+                                           aria-label="Checkbox for newsletter">
+                                </div>
+                                <span class="form-control">Subscribe to newsletter and updates</span>
+                            </div>
+                            <div class="input-group mt-2">
+                                <div class="input-group-text">
+                                    <input class="form-check-input mt-0" type="checkbox" id="termsCheck"
+                                           aria-label="Checkbox for terms" required>
+                                </div>
+                                <span class="form-control">I agree to the <a href="../Melissaange2003/PrivacyPolicy.html" target="_blank">Terms and Conditions</a> and <a
+                                        href="../Melissaange2003/PrivacyPolicy.html">Privacy Policy</a> <span class="text-danger">*</span></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button id="send" type="button" class="btn btn-submit">Sign up</button>
+                </div>
+                <p class="text-muted small mt-3 text-center">By submitting, you confirm that the information provided is
+                    accurate.</p>
+            </form>
+        </div>
+
+
+
+</div>
+
+    <div id="output"></div>
+    <footer class="py-5 mt-5">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6">
+                        <h5 class="fw-bold mb-3">GET IN TOUCH</h5>
+                        <ul class="list-unstyled text-secondary">
+                            <li class="mb-2"><i class="fa-solid fa-phone"></i>+32 2 123 45 67</li>
+                            <li class="mb-2"><i class="fa-solid fa-at"></i> <a href="mailto:info@cytek.com" class="text-secondary text-decoration-none">info@cytek.com</a></li>
+                            <li class="mb-2"><i class="fa-solid fa-location-dot"></i>Geel 2440</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <h5 class="fw-bold mb-3">OPENING HOURS</h5>
+                        <ul class="list-unstyled text-secondary">
+                            <li class="mb-2"><span class="fw-semibold">MONDAY - FRIDAY:</span> 9:00 - 18:00</li>
+                            <li class="mb-2"><span class="fw-semibold">SATURDAY:</span> 10:00 - 16:00</li>
+                            <li class="mb-2"><span class="fw-semibold">SUNDAY:</span> Closed</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <h5 class="fw-bold mb-3">FOLLOW US</h5>
+                        <ul class="list-unstyled d-flex gap-3">
+                            <li><a href="https://www.instagram.com/" target="_blank" class="text-secondary fs-4"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/" target="_blank" class="text-secondary fs-4"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="https://x.com/%23%21/" target="_blank" class="text-secondary fs-4"><i class="fa-brands fa-x-twitter"></i></a></li>
+                            <li><a href="https://www.indeed.com/jobs?q=job+search&gclsrc=3p.ds&msclkid=d05f4d5cdc7b1ebe705024f27c2cb1c9&utm_source=bing&utm_medium=cpc&utm_campaign=broad_generic_en&utm_term=job+search&utm_content=Find+Job&vjk=07f41e9e5d6ff45e" target="_blank" class="text-secondary fs-4"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href="https://www.tiktok.com/" target="_blank" class="text-secondary fs-4"><i class="fa-brands fa-tiktok"></i></a></li>
+                        </ul>
+                        <p class="text-secondary mt-3"><span class="fw-bold text-dark">1000+</span> happy customers</p>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center text-md-start">
+                        <a href="https://www.thomasmore.be" class="text-secondary text-decoration-none" target="_blank">© Thomas More</a>
+                    </div>
+                    <div class="col-md-4 text-md-center">
+                        <p>Gedeon Niyongabo</p>
+                    </div>
+                    <div class="col-md-4 text-center text-md-end">
+                        <a href="../Melissaange2003/PrivacyPolicy.html" class="text-secondary text-decoration-none me-3">Privacy Policy</a>
+                        <a href="#" class="text-secondary text-decoration-none">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <script src="../common/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/signup.js"></script>
+
+    </body>
+</html>

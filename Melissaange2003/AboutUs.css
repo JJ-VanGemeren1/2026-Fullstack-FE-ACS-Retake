@@ -1,0 +1,89 @@
+/* "I first declare all my variables inside :root so they're available everywhere on the page. Then below, I use them with var()." */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@import "common/css/global_vars.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--base-font-size);
+    color: var(--color);
+    background-color: var(--background-color);
+}
+
+p {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: var(--base-font-size);
+}
+
+.col-md-6 p {
+    text-align: left;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+h2 {
+    text-align: center;
+}
+
+#container {
+    max-width: 960px;
+    margin: auto;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: #ffffff !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-color) !important;
+    border-color: var(--dark-color) !important;
+}
+
+.nav-link.active,
+.navbar-nav .active > .nav-link {
+    color: inherit !important;
+    font-weight: normal !important;
+}
+a {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--dark-color);
+}
+
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.privacy p,
+.privacy h1,
+.privacy h2 {
+    color: #102036;
+}

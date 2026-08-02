@@ -1,0 +1,39 @@
+ /* Global CSS variabels + overwrite Bootstrap variabels comes here */
+
+
+  :root {
+   /* Fonts */
+   --h-font: 'Cantata One', serif;
+   --p-font: Bentham, serif;
+
+   /* Main colors */
+   --primary-color: #698094;
+   --secondary-color: #102036;;
+   --tertiary-color: #e6edf1;
+
+   /* Extra useful colors */
+   --text-color: #212529;
+   --light-text: #6c757d;
+   --white: #ffffff;
+   --border-color: #dee2e6;
+
+
+   --bs-navbar-color: var(--tertiary-color);
+   --bs-navbar-hover-color: var(--white);
+   --bs-navbar-active-color: var(--white);
+   --bs-navbar-brand-color: var(--white);
+   --bs-navbar-brand-hover-color: var(--white);
+   --bs-emphasis-color-rgb: 230, 237, 241;
+
+   --bs-btn-hover-bg: var(--white);
+   --bs-btn-hover-border-color: var(--secondary-color);
+   --bs-btn-hover-color: var(--secondary-color);
+  }
+
+
+
+
+
+
+
+

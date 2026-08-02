@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bentham&family=Cantata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bentham&family=Cantata+One&family=Cinzel:wght@400..900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+@import "bootstrap.min.css";
+@import "global_vars.css";
+/* Import student CSS files here */
+@import "../../Melissaange2003/AboutUs.css";
+@import "../../student2/css/student2.css";
+@import "../../student2/css/index_style.css";
+
+
